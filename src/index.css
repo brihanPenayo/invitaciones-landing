@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Domine&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Domine&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  outline: 1px solid red
+}

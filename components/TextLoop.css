@@ -1,0 +1,21 @@
+.text-loop__text {
+  -webkit-animation: test 3.8s ease infinite;
+}
+
+@keyframes test {
+ 0%{
+  opacity: 0;
+ }
+ 15%{
+  opacity: 1;
+ }
+ 50%{
+   opacity: 1;
+  } 
+  85%{
+  opacity: 1;
+ }
+ 100%{
+  opacity: 0;
+ }
+}
