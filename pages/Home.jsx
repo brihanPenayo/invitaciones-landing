@@ -25,9 +25,9 @@ const Home = () => {
     }, []);
 
     return (
-        <section className='w-full overflow-hidden z-[0] relative bg-fixex min-h-screen grid place-items-center place-content-center before:content-[""] before:h-full before:w-full before:-z-[8] before:absolute before:bg-amber-50 before:opacity-50'>
+        <section className='w-full overflow-hidden z-[0] relative bg-fixex min-h-screen grid place-items-center place-content-center before:content-[""] before:h-full before:w-full before:-z-[8] before:absolute before:bg-amber-50 before:opacity-70'>
             <LoopEfect loopData={IMAGES} isImage={true} interval={interval} />
-            <div id="parallax__txt" className='sm:w-[768px] w-[400px] h-full font-display sm:leading-[5rem] text-[10vmin]'>
+            <div id="parallax__txt" className='sm:w-[768px] w-[400px] h-full font-display sm:leading-[5rem] text-[8vmin]'>
                 <Fade bottom cascade collapse >
                     <h1>Invitaciones</h1>
                     <h1>Exclusivas</h1>
