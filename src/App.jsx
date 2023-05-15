@@ -1,11 +1,16 @@
 import './index.css'
 import Home from '../pages/Home'
+import { Personalization } from '../pages/Personalization'
+import { Header } from '../components/Header/Header'
+// import { Contact } from '../pages/Contact'
 function App() {
 
   return (
     <>
-    <Home />
-    {/* <h1 className='font-display'></h1> */}
+      <Header />
+      <Home />
+      <Personalization />
+      {/* <Contact/> */}
     </>
   )
 }
