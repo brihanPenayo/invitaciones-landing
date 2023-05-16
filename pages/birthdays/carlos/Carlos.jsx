@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Carlos.module.css'
 const Carlos = () => {
   return (
+    <div className={styles.mainContainer}>
       <div className={styles.background}>
         <img src='assets/carlos/corner top left.svg' className={styles.l1} alt='leave1' />
         <img src='assets/carlos/middle top left.svg' className={styles.l2} alt='leave2' />
@@ -23,6 +24,7 @@ const Carlos = () => {
           </div>
           <p>CARLOS ROA</p>
         </div>
+      </div>
     </div>
   )
 }
