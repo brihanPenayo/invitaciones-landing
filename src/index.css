@@ -4,6 +4,6 @@
 @tailwind utilities;
 
 *{
-  /* outline: 1px solid red; */
+  /* outline: 3px solid red; */
   scroll-behavior: smooth;
 }

@@ -23,7 +23,7 @@ const LoopEfect = ({ loopData, interval, isText, isImage }) => {
 
     return (
         <>
-            {isVisible && isText && <Flip bottom cascade><span className="font-display text-[8vmin] text-loop__text">{loopData[currentIndex]}</span></Flip>}
+            {isVisible && isText && <Flip bottom cascade><span className="font-display text-[8vmin] loop__effect">{loopData[currentIndex]}</span></Flip>}
             {isVisible && isImage && <Fade bottom><img id='pexels__bg' src={loopData[currentIndex]} className='blur-[2px] text-loop__text top-0 absolute -z-10' alt={`Imagen de fondo numero ${currentIndex + 1}`} /></Fade>}
         </>
     );

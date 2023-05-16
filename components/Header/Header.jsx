@@ -9,7 +9,7 @@ export const Header = () => {
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-[4rem]">
                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold font-body leading-7 hover:bg-amber-200">Inicio</a>
-                    <a href="#seccion2" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold font-body leading-7 hover:bg-amber-200">Opciones</a>
+                    <a href="#opciones" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold font-body leading-7 hover:bg-amber-200">Opciones</a>
                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold font-body leading-7 hover:bg-amber-200">Seccion3</a>
                     <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold font-body leading-7 hover:bg-amber-200">Seccion4</a>
                 </div>
