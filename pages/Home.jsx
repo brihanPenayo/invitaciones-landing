@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade'
 const Home = () => {
     const TEXTS = [' Fiesta', ' Boda', 's Quinceaños'];
     const IMAGES = ['/assets/img/pexels-fs.webp', '/assets/img/pexels-bd.webp', '/assets/img/pexels-xv.webp']
-    const interval = 4000;
+    const INTERVAL = 4000;
 
     const onScroll = () => {
         const TEXT = document.getElementById("parallax__txt");
@@ -26,13 +26,13 @@ const Home = () => {
 
     return (
         <section className='w-full overflow-hidden z-[0] relative bg-fixex min-h-screen grid place-items-center place-content-center before:content-[""] before:h-full before:w-full before:-z-[8] before:absolute before:bg-amber-50 before:opacity-70'>
-            <LoopEfect loopData={IMAGES} isImage={true} interval={interval} />
+            <LoopEfect loopData={IMAGES} isImage={true} interval={INTERVAL} />
             <div id="parallax__txt" className='ml-[70vmin] w-[100vw] h-full font-display leading-[9vmin] text-[8vmin]'>
                 <Fade bottom cascade collapse >
                     <h1>Invitaciones</h1>
                     <h1>Exclusivas</h1>
                     <h1>Para tu
-                        <LoopEfect isText={true} loopData={TEXTS} interval={interval} />
+                        <LoopEfect isText={true} loopData={TEXTS} interval={INTERVAL} />
                     </h1>
                 </Fade>
             </div>

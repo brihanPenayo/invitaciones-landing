@@ -3,7 +3,7 @@ import Home from '../pages/Home'
 import { Personalization } from '../pages/Personalization'
 import { Header } from '../components/Header/Header'
 import ActiveEvents from '../pages/ActiveEvents'
-// import { Contact } from '../pages/Contact'
+import Contact from '../pages/Contact'
 function App() {
 
   return (
@@ -12,7 +12,7 @@ function App() {
       <Home />
       <Personalization />
       <ActiveEvents />
-      {/* <Contact/> */}
+      <Contact/>
     </>
   )
 }
