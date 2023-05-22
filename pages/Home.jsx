@@ -10,11 +10,9 @@ const Home = () => {
 
     const onScroll = () => {
         const TEXT = document.getElementById("parallax__txt");
-        const BACKGROUND = document.getElementById("pexels__bg");
         let scroll = window.scrollY;
         let rate = scroll * 0.5;
         TEXT.style.transform = `translate3d(0px,${rate}px,0px)`
-        BACKGROUND.style.transform = `translate3d(0px,${rate * 0.8}px,0px)`
     }
 
     useEffect(() => {

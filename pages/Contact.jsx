@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { toast, Toaster } from 'react-hot-toast'
+import Turnstile from "react-turnstile";
 
 const Contact = () => {
     const initialValues = {
@@ -9,9 +10,14 @@ const Contact = () => {
         text: ""
     }
     const [data, setData] = useState(initialValues)
+    const [verified, setVerified] = useState(false);
 
     const handleEdit = (e) => {
         setData({ ...data, [e.target.name]: e.target.value });
+    }
+
+    const handleVerified = () => {
+        setVerified(true);
     }
 
     const handleSubmit = async (e) => {
@@ -35,7 +41,7 @@ const Contact = () => {
     }
 
     return (
-        <section id='contact' className='bg-amber-200 text-[2vmin] sm:text-[4vmin] flex font-body flex-col gap-4 p-8 place-items-center'>
+        <section id='contact' className='bg-amber-200 text-[2vmin] sm:text-[4vmin] sm:mx-auto flex font-body flex-col gap-4 p-8 place-items-center'>
             <Toaster />
             <h1 className='sm:text-[6vmin]'>Contactanos!</h1>
             <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[50%] sm:w-[80%]'>
@@ -45,7 +51,8 @@ const Contact = () => {
                     onChange={handleEdit} placeholder='Ingrese su E-mail' name="mail" required />
                 <textarea className='p-4 rounded-lg' name="text" minLength={3} rows={5} value={data.text}
                     onChange={handleEdit} placeholder="Cuentanos" />
-                <button className='p-4 rounded-lg bg-amber-300' type="submit">Enviar</button>
+                <Turnstile sitekey={`${import.meta.env.VITE_SITE_KEY}`} retry='auto' theme='light' onVerify={handleVerified} />
+                <button disabled={!verified} className='p-4 rounded-lg disabled:bg-gray-200 disabled:cursor-not-allowed bg-amber-300' type="submit">Enviar</button>
             </form>
         </section>
     )
