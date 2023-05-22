@@ -35,17 +35,17 @@ const Contact = () => {
     }
 
     return (
-        <section id='contact' className='bg-amber-200 flex font-body flex-col gap-4 p-4 place-items-center'>
+        <section id='contact' className='bg-amber-200 text-[2vmin] sm:text-[4vmin] flex font-body flex-col gap-4 p-8 place-items-center'>
             <Toaster />
-            <h1>Contactame:</h1>
-            <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[50%]'>
-                <input className='p-2' type="text" autoComplete='off' value={data.name}
+            <h1 className='sm:text-[6vmin]'>Contactanos!</h1>
+            <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[50%] sm:w-[80%]'>
+                <input className='p-4 rounded-lg' type="text" autoComplete='off' value={data.name}
                     onChange={handleEdit} placeholder='Ingrese su nombre' name="name" required />
-                <input className='p-2' type="email" autoComplete='off' value={data.mail} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                <input className='p-4 rounded-lg' type="email" autoComplete='off' value={data.mail} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     onChange={handleEdit} placeholder='Ingrese su E-mail' name="mail" required />
-                <textarea className='p-2' name="text" minLength={3} rows={5} value={data.text}
-                    onChange={handleEdit} placeholder="Cuentame!" />
-                <button className='p-4 bg-amber-300' type="submit">Enviar</button>
+                <textarea className='p-4 rounded-lg' name="text" minLength={3} rows={5} value={data.text}
+                    onChange={handleEdit} placeholder="Cuentanos" />
+                <button className='p-4 rounded-lg bg-amber-300' type="submit">Enviar</button>
             </form>
         </section>
     )

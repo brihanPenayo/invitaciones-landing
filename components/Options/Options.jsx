@@ -18,7 +18,7 @@ export const Options = () => {
         <Fade bottom cascade collapse >
             <ul className='list-disc list-inside'>
                 {OPTIONS.map((opt, index) => (
-                    <li className='font-body cursor-pointer text-2xl leading-[3rem]' key={index}>{opt}</li>
+                    <li className='font-body cursor-pointer marker:text-amber-500 text-2xl leading-[3rem]' key={index}>{opt}</li>
                 ))}
             </ul>
         </Fade>
