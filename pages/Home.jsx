@@ -1,5 +1,5 @@
 import React from 'react'
-import LoopEfect from '../components/LoopEfect'
+import LoopEfect from '../components/LoopEfect/LoopEfect'
 import { useEffect } from 'react';
 import Fade from 'react-reveal/Fade'
 

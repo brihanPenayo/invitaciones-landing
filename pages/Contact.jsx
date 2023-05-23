@@ -43,15 +43,15 @@ const Contact = () => {
     return (
         <section id='contact' className='bg-amber-200 text-[2vmin] sm:text-[4vmin] sm:mx-auto flex font-body flex-col gap-4 p-8 place-items-center'>
             <Toaster />
-            <h1 className='sm:text-[6vmin]'>Contactanos!</h1>
-            <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[50%] sm:w-[80%]'>
+            <h1 className='sm:text-[10vmin] mb-4 text-5xl font-display'>Contactanos!</h1>
+            <form onSubmit={handleSubmit} className='flex flex-col gap-4 w-[50%] overflow-hidden sm:w-[80%]'>
                 <input className='p-4 rounded-lg' type="text" autoComplete='off' value={data.name}
                     onChange={handleEdit} placeholder='Ingrese su nombre' name="name" required />
                 <input className='p-4 rounded-lg' type="email" autoComplete='off' value={data.mail} pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     onChange={handleEdit} placeholder='Ingrese su E-mail' name="mail" required />
                 <textarea className='p-4 rounded-lg' name="text" minLength={3} rows={5} value={data.text}
                     onChange={handleEdit} placeholder="Cuentanos" />
-                <Turnstile sitekey={`${import.meta.env.VITE_SITE_KEY}`} retry='auto' theme='light' onVerify={handleVerified} />
+                <Turnstile className='turnStile' sitekey={`${import.meta.env.VITE_SITE_KEY}`} retry='auto' theme='light' onVerify={handleVerified} />
                 <button disabled={!verified} className='p-4 rounded-lg disabled:bg-gray-200 disabled:cursor-not-allowed bg-amber-300' type="submit">Enviar</button>
             </form>
         </section>

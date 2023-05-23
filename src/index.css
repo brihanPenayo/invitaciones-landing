@@ -3,7 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   /* outline: 3px solid red; */
   scroll-behavior: smooth;
+}
+
+.turnStile {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.turnStile>iframe {
+  width: 100% !important;
+}
+
+@media (min-width: 768px) {
+  .turnStile {
+    width: 60%;
+  }
+
+  .turnStile>iframe {
+    max-width: 100%;
+  }
 }
